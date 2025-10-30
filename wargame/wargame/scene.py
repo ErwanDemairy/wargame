@@ -66,6 +66,9 @@ class Scene:
         if message.message_id == MessageType.UPDATE_SCREEN:
             return self.update_screen()
         for node in self.nodes:
+            if getattr(node, "messages", None):
+                if node.messages and message.message_id not in node.messages:
+                    continue
             # let the node decide what it has to
             if node.handle(message):
                 return

@@ -23,7 +23,8 @@ class ConfigLoader:
             for file in files:
                 # load this yaml file
                 filepath = os.path.join(subdir, file)
-                data = yaml.load(open(filepath, 'r'))
+                print('Loading config file {0}'.format(filepath))
+                data = yaml.load(open(filepath, 'r'), Loader=yaml.CLoader)
                 path = PurePath(filepath).parts
                 path = '/'.join(path[path.index('resources'):])
                 config = get_config_item(data, path)

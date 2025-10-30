@@ -29,7 +29,7 @@ class BaseNode:
         return [0, 0]
 
     def update(self, time_delta):
-        pass
+        return []
 
     def handle(self, message):
         # return False - we did not consume the event

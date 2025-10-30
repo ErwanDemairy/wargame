@@ -38,7 +38,7 @@ class MouseOverNode(ImageNode):
                 self.inside = False
 
     def update(self, time_delta):
-        pass
+        return []
 
 
 def game():

@@ -45,7 +45,7 @@ class NodeTransmit(ImageNode):
                 MessageSystem.add_message(Message(self.message_id, False))
 
     def update(self, time_delta):
-        pass
+        return []
 
 
 class NodeReceive(ImageNode):
@@ -64,7 +64,7 @@ class NodeReceive(ImageNode):
         self.tween_result = TweenResult(new=self.rect)
 
     def update(self, time_delta):
-        pass
+        return []
 
 
 def game():
